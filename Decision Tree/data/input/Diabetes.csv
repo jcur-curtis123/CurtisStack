@@ -1,0 +1,11 @@
+﻿Age,Systolic Blood Pressure,OnHypertensionMedication,HasDiabetes,IsSmoker,Total Cholesterol,HDL cholesterol,IsAfricanAmerican,Gender,Assessment
+14,152,FALSE,FALSE,FALSE,177,63,TRUE,Female,Low Risk
+76,129,FALSE,FALSE,TRUE,141,62,TRUE,Female,Low Risk
+79,140,TRUE,FALSE,TRUE,190,69,TRUE,Male,Low Risk
+86,131,FALSE,FALSE,TRUE,183,69,FALSE,Male,Low Risk
+36,145,FALSE,FALSE,FALSE,195,65,FALSE,Male,Low Risk
+100,140,TRUE,FALSE,FALSE,174,76,FALSE,Male,High Risk
+70,149,TRUE,FALSE,TRUE,191,61,FALSE,Male,High Risk
+32,205,TRUE,TRUE,TRUE,167,30,TRUE,Male,High Risk
+81,166,FALSE,FALSE,FALSE,176,66,TRUE,Female,High Risk
+77,201,FALSE,FALSE,FALSE,179,23,FALSE,Female,High Risk
