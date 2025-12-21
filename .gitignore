@@ -1,0 +1,13 @@
+# binaries
+app
+
+# databases
+*.db
+
+# macOS
+.DS_Store
+
+# build artifacts
+*.o
+
+
