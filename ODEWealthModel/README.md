@@ -43,7 +43,33 @@ feedback effects.
 
 ---
 
-## Purpose
-The goal of this project is to compare investment strategies, analyze
-time-to-goal behavior, and study sensitivity to assumptions using a transparent,
-mathematically grounded framework.
+## Installation & Usage
+
+### Prerequisites
+- Python 3.10+
+- PostgreSQL
+- `psql` available on your PATH
+
+---
+
+### Setup
+
+#### 1. Clone the repository
+
+git clone git@github.com:jcur-curtis123/CurtisStack.git
+cd CurtisStack/ODEWealthModel
+
+#### 2. Create and activate a virtual env
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+#### 3. Create the database and tables
+
+createdb odelab
+psql -d odelab -f db/schema.sql
+
+#### 4. Configure environment variables 
+
+DATABASE_URL=postgresql+psycopg2://YOUR_USERNAME@localhost:5432/odelab
+
