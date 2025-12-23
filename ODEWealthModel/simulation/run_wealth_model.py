@@ -1,11 +1,19 @@
 import numpy as np
 import pandas as pd
+import os
 from scipy.integrate import solve_ivp
 from sqlalchemy import create_engine, text
 
+DATABASE_URL = os.getenv("DATABASE_URL")
+if DATABASE_URL is None:
+    raise RuntimeError(
+        "DATABASE_URL is not set. "
+        "Create a .env file with DATABASE_URL defined."
+    )
+
+
 engine = create_engine(
-    "postgresql+psycopg2://jacobcurtis@localhost:5432/odelab"
-)
+DATABASE_URL)
 
 def wealth_ode(t, y, rf, mu, lam, pi, contrib, withdraw):
     W = y[0]
