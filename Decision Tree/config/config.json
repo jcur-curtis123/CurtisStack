@@ -1,0 +1,5 @@
+{
+  "FIND_AVERAGES": true,
+  "FIND_BEST_SPLIT": true,
+  "CALCULATION_TO_USE": "GINI"
+}
