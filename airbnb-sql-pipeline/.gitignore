@@ -1,0 +1,14 @@
+# Data (do not commit)
+data/raw/
+data/processed/
+
+# Database
+db/*.db
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

@@ -23,9 +23,13 @@ pip install -r requirements.txt
 python scripts/run_pipeline.py
 ```
 
-## Outputs:
-- SQLite DB at `db/airbnb.db`
-- CSVs in `data/processed/` (materialized query results)
+## Data Setup
+
+This project uses the public Airbnb Kaggle dataset.
+
+To run the pipeline:
+
+Download Airbnb_Open_Data.csv` from: https://www.kaggle.com/datasets/arianazmoudeh/airbnbopendata?resource=download
 
 All transformations from raw → staging → marts happen in versioned SQL files in `sql/`.
 
