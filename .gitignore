@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+
+# Airbnb pipeline data artifacts
+airbnb-sql-pipeline/db/*.db
+airbnb-sql-pipeline/data/raw/*.csv
+airbnb-sql-pipeline/data/processed/*.csv
