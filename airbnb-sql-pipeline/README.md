@@ -29,7 +29,7 @@ This project uses the public Airbnb Kaggle dataset.
 
 To run the pipeline:
 
-Download Airbnb_Open_Data.csv` from: https://www.kaggle.com/datasets/arianazmoudeh/airbnbopendata?resource=download
+Download Airbnb_Open_Data.csv from: https://www.kaggle.com/datasets/arianazmoudeh/airbnbopendata?resource=download
 
 All transformations from raw → staging → marts happen in versioned SQL files in `sql/`.
 
