@@ -22,7 +22,7 @@ void KMeans::fit(const std::vector<std::vector<double>>& data) {
     labels_.assign(n, 0);
     centroids_.assign(k_, std::vector<double>(d, 0.0));
 
-    // --- 1️⃣ Initialize centroids (first k points)
+    // Initialize centroids (first k points)
     for (int i = 0; i < k_; i++) {
         centroids_[i] = data[i];
     }
@@ -30,7 +30,7 @@ void KMeans::fit(const std::vector<std::vector<double>>& data) {
     for (int iter = 0; iter < max_iters_; iter++) {
         bool changed = false;
 
-        // --- 2️⃣ Assignment step
+        // Assignment step
         for (int i = 0; i < n; i++) {
             double best_dist = distance(data[i], centroids_[0]);
             int best_cluster = 0;
@@ -52,7 +52,7 @@ void KMeans::fit(const std::vector<std::vector<double>>& data) {
         // Stop if no changes
         if (!changed) break;
 
-        // --- 3️⃣ Update step
+        // Update step
         std::vector<std::vector<double>> new_centroids(
             k_, std::vector<double>(d, 0.0));
         std::vector<int> counts(k_, 0);

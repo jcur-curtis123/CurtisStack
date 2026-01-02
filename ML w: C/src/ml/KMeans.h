@@ -2,7 +2,7 @@
 #define KMEANS_H
 
 #include <vector>
-
+/// def KMeans for 
 class KMeans {
 public:
     KMeans(int k, int max_iters = 100);

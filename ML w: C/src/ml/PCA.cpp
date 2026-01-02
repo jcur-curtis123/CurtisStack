@@ -2,6 +2,7 @@
 #include <cmath>
 #include <random>
 
+/// 
 static std::vector<double> matVec(
     const std::vector<std::vector<double>>& M,
     const std::vector<double>& v) {
@@ -23,7 +24,7 @@ static double dot(const std::vector<double>& a,
     }
     return s;
 }
-
+/// normalize data for cov matrix 
 static void normalize(std::vector<double>& v) {
     double norm = std::sqrt(dot(v, v));
     for (double& x : v) x /= norm;
@@ -36,7 +37,7 @@ void PCA::fit(const std::vector<std::vector<double>>& data) {
     int n = data.size();
     int d = data[0].size();
 
-    // 1️⃣ Covariance matrix
+    // Covariance matrix
     std::vector<std::vector<double>> cov(
         d, std::vector<double>(d, 0.0));
 
@@ -54,7 +55,7 @@ void PCA::fit(const std::vector<std::vector<double>>& data) {
 
     components_.clear();
 
-    // 2️⃣ Power iteration for top components
+    // Power iteration for top components
     std::mt19937 gen(42);
     std::uniform_real_distribution<> dist(-1, 1);
 
