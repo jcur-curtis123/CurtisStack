@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Price Drops</h2>
+{% for drop in drops %}
+<div class="card">
+    <p><strong>Source:</strong> {{ drop.source }}</p>
+    <p>Old Price: ${{ drop.old_price }}</p>
+    <p>New Price: ${{ drop.new_price }}</p>
+    <p>Date: {{ drop.changed_at }}</p>
+</div>
+{% endfor %}
+{% if drops|length == 0 %}
+<p>No price drops yet.</p>
+{% endif %}
+{% endblock %}

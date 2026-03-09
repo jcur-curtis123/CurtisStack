@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Available Listings</h2>
+{% for listing in listings %}
+<div class="card">
+    <h3>{{ listing.title }}</h3>
+    <p><strong>Source:</strong> {{ listing.source }}</p>
+    <p><strong>Price:</strong> ${{ listing.price }}</p>
+    <a href="{{ listing.url }}" target="_blank">View Listing</a>
+</div>
+{% endfor %}
+{% if listings|length == 0 %}
+<p>No listings yet. Run POST /scrape</p>
+{% endif %}
+{% endblock %}
