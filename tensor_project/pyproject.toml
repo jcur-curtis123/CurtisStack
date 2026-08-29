@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tensor_project"
+version = "0.1.0"
+description = "Tensor project"
+authors = [{ name = "Jacob Curtis" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
